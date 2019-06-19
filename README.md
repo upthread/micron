@@ -3,6 +3,8 @@
 
 You can find the deployed project at [https://rmtlabs.netlify.com](https://rmtlabs.netlify.com/).
 
+<br> <br>
+
 ##  Contributors
 
 
@@ -18,14 +20,11 @@ You can find the deployed project at [https://rmtlabs.netlify.com](https://rmtla
 
 ## Project Overview
 
-Deployment Ready Offline First React Functional Component Library Web 3.0 Style. 
-
-Each component designed to be used within a greater app strategy. It's like Material-UI Pro but for functional components. 
-
-
-[Trello Board](https://trello.com/rmtlabs)
+Deployment Ready Offline First React Functional Component Library Web 3.0 Style. A complete MVC housed in a single context seemlessly integrating into the greater app strategy. It's like Material-UI Pro but for functional mvc components. 
 
 [Product Canvas](https://docs.google.com/document/d/1JtzI5QNqebTJw8WQAY_72dzgwo4LUk9Jnluex2vW5bw/edit?usp=sharing)
+
+[Trello Board](https://trello.com/rmtlabs) 
 
 
 ### Key Features
