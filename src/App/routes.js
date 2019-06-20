@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 
-import Form from '../Form'
+// import Form from '../Form'
 import Template from '../Template'
 import MultiStepForm from '../MultiStepForm'
 import Splash from '../Splash'
