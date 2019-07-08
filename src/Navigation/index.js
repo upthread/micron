@@ -38,9 +38,11 @@ const useStyles = makeStyles( theme => ({
 
 
 const Navigation = () => {
+    
     const [state, setState] = useState({
         top: false,
     })
+    
     const classes = useStyles
 
     const toggleDrawer = (side, open) => event => {
@@ -49,7 +51,7 @@ const Navigation = () => {
         }
     
         setState({ ...state, [side]: open });
-    };
+    }
     
 
         // const sideList = side => (
@@ -79,32 +81,32 @@ const Navigation = () => {
         //         </div>
         //     );
             
-            const fullList = side => (
-                <div
-                className={classes.fullList}
-                role="presentation"
-                onClick={toggleDrawer(side, false)}
-                onKeyDown={toggleDrawer(side, false)}
-                >
-                <List>
-                    {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                    ))}
-                </List>
-                <Divider />
-                <List>
-                    {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                    ))}
-                </List>
-            </div>
-        );
+        const fullList = side => (
+            <div
+            className={classes.fullList}
+            role="presentation"
+            onClick={toggleDrawer(side, false)}
+            onKeyDown={toggleDrawer(side, false)}
+            >
+            <List>
+                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                <ListItem button key={text}>
+                    <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                    <ListItemText primary={text} />
+                </ListItem>
+                ))}
+            </List>
+            <Divider />
+            <List>
+                {['All mail', 'Trash', 'Spam'].map((text, index) => (
+                <ListItem button key={text}>
+                    <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                    <ListItemText primary={text} />
+                </ListItem>
+                ))}
+            </List>
+        </div>
+    )
 
     return (
         <div className={classes.root}>
