@@ -1,7 +1,7 @@
 
-# React Micro Tactics
+# Micron MVC
 
-You can find the deployed project at [https://rmtlabs.netlify.com](https://rmtlabs.netlify.com/).
+You can find the deployed project at [https://micron.upthread.io](https://rmtlabs.netlify.com/).
 
 <br> <br>
 
