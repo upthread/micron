@@ -1,28 +1,22 @@
-// import React from 'react'
-import { createMuiTheme } from '@material-ui/core/styles'
+import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
 
-const theme = () => {
 
-    const styles = createMuiTheme({
-        palette: {
-            primary: '#eeeeff',
-        },
-        shape: {
-            borderRadius: 8
-        },
-        overrides: {
-            MuiDrawer: {
-                paper: {
-                    background: '#2b193d'
-                    
-                }
-            }
-        }
-    })
+const useStyles = makeStyles( theme => ({
+    palette: {
+        primary: '#2b193d',
+    },
+    shape: {
+        borderRadius: 8
+    },
+    // overrides: {
+    //     MuiDrawer: {
+    //         paper: {
+    //             background: '#2b193d'
+                
+    //         }
+    //     }
+    // }
+}))
 
-    return (
-        styles
-    )
-}
-
-export default theme
+export default useStyles
