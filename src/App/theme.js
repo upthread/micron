@@ -1,22 +1,13 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
+import styled from 'styled-components'
 
+const theme = () => {
+    return (
+        <div>
+            
+        </div>
+    )
+}
 
-const useStyles = makeStyles( theme => ({
-    palette: {
-        primary: '#2b193d',
-    },
-    shape: {
-        borderRadius: 8
-    },
-    // overrides: {
-    //     MuiDrawer: {
-    //         paper: {
-    //             background: '#2b193d'
-                
-    //         }
-    //     }
-    // }
-}))
+export default theme
 
-export default useStyles
