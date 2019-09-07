@@ -1,12 +1,22 @@
 import React from 'react'
+import { Route } from 'react-router-dom'
 
-import * from 'module'
+// import Form from '../Form'
+import Template from '../Template'
+import MultiStepForm from '../MultiStepForm'
+import Splash from '../Splash'
 
 const routes = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+            <Route exact path='/'  component={Splash} /> 
+            <Route path='/templ'  component={Template} /> 
+            <Route path='/multi'  component={MultiStepForm} /> 
+            {/* <Route path='/'  component={} />  */}
+            {/* <Route path='/'  component={} />  */}
+            {/* <Route path='/'  component={} />  */}
+            {/* <Route path='/'  component={} />  */}
+        </>
     )
 }
 
