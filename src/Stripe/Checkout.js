@@ -8,7 +8,7 @@ function Checkout() {
   const [product] = React.useState({
     name:"California",
     price: 20,
-    description:"Solicon Valley"
+    description:"Silicon Valley"
   });
 
   const handleToken = (token, addresses)=>{
