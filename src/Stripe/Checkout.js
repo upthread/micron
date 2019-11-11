@@ -3,6 +3,10 @@ import React from 'react';
 import './App.css';
 import StripeCheckout from "react-stripe-checkout";
 
+import PouchDB from 'pouchdb';
+
+var tokens = new PouchDB('tokens');
+
 function Checkout() {
 
   const [product] = React.useState({
@@ -11,8 +15,34 @@ function Checkout() {
     description:"Silicon Valley"
   });
 
+
+   //this function parses the relavent information needed for the backend and puts the "JSON blob" into Pouchdb to be synced and authenticated  with the backend later
+   const convert = (token)=>{
+    
+    let charge ={
+      _id: token.id,
+      email: token.email,
+      amount: product.price *100,
+      currency: "usd",
+      description: `purchased the ${product.name}`,
+      shipping:{
+        name: token.card.name,
+        address:{
+          line1: token.card.address_line1,
+          line2: token.card.address_line2,
+          city:  token.card.address_city,
+          state: token.card.address_state,
+          country: token.card.address_country,
+          postal_code: token.card.address_zip
+        }
+      }
+    }
+    console.log(charge);
+    tokens.put(charge)
+  }
+
   const handleToken = (token, addresses)=>{
-    console.log({token, addresses});
+    convert(token);
   }
 
   return (
